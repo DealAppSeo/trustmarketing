@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-activity",
+    "what": "Read activity",
+    "install": "Read activity from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "read-gaterun",
+    "what": "Read a gate run",
+    "install": "Read the gate run from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "run-probe",
+    "what": "Probe the trust layer. Do not fix the finding.",
+    "install": "A person runs the probe on this machine.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
