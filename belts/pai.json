@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-wide",
+    "what": "Read so work can be routed",
+    "install": "Read from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "write-goals",
+    "what": "Write goals",
+    "install": "Write goals in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "human-grant",
+    "what": "A person issues a grant. This role holds no root key.",
+    "install": "Wait until a person issues the grant.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
