@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-grants",
+    "what": "Read grants",
+    "install": "Read grants from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "read-activity",
+    "what": "Read activity for a grant review",
+    "install": "Read activity from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "grant-revoke",
+    "what": "Revoke a grant. Do not issue one.",
+    "install": "A person runs the revoke from the local checkout.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
