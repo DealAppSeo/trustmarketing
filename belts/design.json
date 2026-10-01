@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-activity",
+    "what": "Read activity",
+    "install": "Read activity from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "write-proposal",
+    "what": "Write a proposal",
+    "install": "Write the proposal in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "repo-grant",
+    "what": "Shipping a change is a separate grant",
+    "install": "A person grants a repo change. This role does not ship it.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
