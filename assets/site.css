@@ -1,0 +1,75 @@
+:root {
+  color: #1a1a1a;
+  background: #f6f4ef;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+a { color: #0b3a66; overflow-wrap: anywhere; }
+
+a:focus-visible,
+:focus-visible {
+  outline: 3px solid #0b3a66;
+  outline-offset: 3px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+}
+
+p, td, th { font-size: 1.05rem; }
+
+pre {
+  overflow-x: auto;
+  padding: 0.9rem 1rem;
+  background: #fff;
+  border: 1px solid #cfc8bc;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid #cfc8bc;
+}
+
+th { font-family: "Segoe UI", sans-serif; }
+
+footer {
+  margin-top: 2rem;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+}
