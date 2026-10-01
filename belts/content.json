@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-passport",
+    "what": "Read a passport",
+    "install": "Read the passport from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "write-docs",
+    "what": "Write docs and explanation",
+    "install": "Write the text in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "own-grant",
+    "what": "This belt is granted on its own",
+    "install": "A person grants this belt alone. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
