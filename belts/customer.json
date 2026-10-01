@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-activity",
+    "what": "Read what a user hit",
+    "install": "Read activity from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "write-playbook",
+    "what": "Write an onboarding playbook",
+    "install": "Write the playbook in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "no-authority",
+    "what": "This role has no authority over a user",
+    "install": "Do not grant authority over a user.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
