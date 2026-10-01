@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-policy",
+    "what": "Read policy",
+    "install": "Read policy from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "write-draft",
+    "what": "Write a draft for a person to review",
+    "install": "Write the draft in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "human-review",
+    "what": "A person reviews the draft. This is not counsel.",
+    "install": "Leave the draft until a person reads it.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
