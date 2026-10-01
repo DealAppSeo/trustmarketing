@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-activity",
+    "what": "Read activity",
+    "install": "Read activity from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "read-gaterun",
+    "what": "Read a gate run",
+    "install": "Read the gate run from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "run-eval",
+    "what": "Run an eval. Do not write the result as a fact.",
+    "install": "A person runs the eval on this machine.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
