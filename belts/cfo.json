@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-authority",
+    "what": "Read the authority surface",
+    "install": "Read authority from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "read-payments",
+    "what": "Read the payments surface",
+    "install": "Read payments from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "human-limit",
+    "what": "Leave the money alone until a person says to spend it",
+    "install": "Wait until a person writes the grant. This role does not write it.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
