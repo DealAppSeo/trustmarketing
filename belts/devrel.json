@@ -1,0 +1,23 @@
+[
+  {
+    "id": "read-repo",
+    "what": "Read the repo",
+    "install": "Read the repo from the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "write-answer",
+    "what": "Write an answer",
+    "install": "Write the answer in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "no-repo-write",
+    "what": "Do not write to the repo",
+    "install": "Leave the repo unchanged.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
