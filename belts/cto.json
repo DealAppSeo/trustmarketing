@@ -1,0 +1,23 @@
+[
+  {
+    "id": "status",
+    "what": "trustshell status",
+    "install": "Run npm i -g @hyperdag/trustshell@1.4.0 on this machine, then run trustshell status.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "proof",
+    "what": "trustshell proof --verify",
+    "install": "Use that same trustshell binary and run trustshell proof with --verify.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "read-lines",
+    "what": "Read the lines the CLI prints",
+    "install": "Read the terminal on this machine. Do not print a secret, a key, or an env value.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
