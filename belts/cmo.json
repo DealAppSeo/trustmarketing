@@ -1,0 +1,23 @@
+[
+  {
+    "id": "openmontage",
+    "what": "OpenMontage, local",
+    "install": "Clone https://github.com/calesthio/OpenMontage.git onto this machine.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "phone-clips",
+    "what": "Phone clips, when someone filmed them",
+    "install": "Place a filmed clip in the local inbox.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "ffmpeg",
+    "what": "ffmpeg",
+    "install": "Use the ffmpeg binary already on this machine.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
