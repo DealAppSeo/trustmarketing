@@ -1,4 +1,4 @@
-# trustmarketing
+# TrustGrowth
 
 Static pages only.
 
