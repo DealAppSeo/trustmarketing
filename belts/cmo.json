@@ -19,5 +19,40 @@
     "install": "Use the ffmpeg binary already on this machine.",
     "cost": "no paid key",
     "status": "NOT_CHECKED"
+  },
+  {
+    "id": "video-motion-page",
+    "what": "Motion page, CSS and inline SVG",
+    "install": "Open /video in a browser on this machine. Nothing is installed and no video file is made.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "video-caption-draft",
+    "what": "Caption and script draft on a free-tier model",
+    "install": "A person pastes the script text into a model they already use and keeps only the lines they can check.",
+    "cost": "free tier, limits NOT_CHECKED",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "video-receipt-line",
+    "what": "Receipt line from trustshell verify",
+    "install": "A person runs the verify command from /start on each TrustShell line and uses what it printed. If it was not run, the line stays NOT_CHECKED.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "video-screen-record",
+    "what": "Screen recording of the motion page",
+    "install": "A person records /video#record with the screen recorder already on this machine. The recording stays on that machine.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "video-schedule-free-tier",
+    "what": "Metricool, free tier, schedule only",
+    "install": "A person signs in to their own Metricool account and schedules the clip after reading it. The monthly cap is on Metricool's help page.",
+    "cost": "free tier, cap on Metricool's help page",
+    "status": "NOT_CHECKED"
   }
 ]
