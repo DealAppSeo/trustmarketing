@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion page — Trust marketing</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/video.css">
+</head>
+<body>
+  <div class="wrap">
+    <a class="chrome" href="#content">Skip to content</a>
+    <nav class="chrome" aria-label="Pages">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/clients">Clients</a></li>
+        <li><a href="/cmo">CMO</a></li>
+        <li><a href="/methods">Methods</a></li>
+        <li><a href="/belt">Belt</a></li>
+        <li><a href="/start">Start</a></li>
+      </ul>
+    </nav>
+    <main id="content">
+      <div class="chrome">
+        <h1>Motion page</h1>
+        <p>This is a motion page. It is not a video file. It is CSS and inline SVG: no script, nothing loaded from outside this site, and no media file in the repo.</p>
+        <p>It plays once for sixteen seconds and holds on the last card. Reload to play it again. A person screen-records it. The recording stays on that person's machine.</p>
+        <p><a href="#record">Recording view</a> hides the text around the frame. Reload once it opens. <a href="/methods/video-social">The method</a> lists every step and who does it.</p>
+      </div>
+
+      <section id="record" class="stage" role="img" aria-label="Motion page, 9:16 frame, sixteen seconds. The same lines are printed as text below the frame.">
+        <div class="progress"></div>
+
+        <div class="scene scene-a">
+          <p class="tag">story</p>
+          <p class="h rise l1">A name on a list</p>
+          <p class="h rise l2">is not a record.</p>
+          <ul class="rows">
+            <li class="row r1"><span class="name-bar"></span><span class="stamp">NOT_CHECKED</span></li>
+            <li class="row r2"><span class="name-bar"></span><span class="stamp">NOT_CHECKED</span></li>
+            <li class="row r3"><span class="name-bar"></span><span class="stamp">NOT_CHECKED</span></li>
+          </ul>
+        </div>
+
+        <div class="scene scene-b">
+          <p class="tag">fact</p>
+          <p class="h rise l1">Check a claim</p>
+          <p class="h rise l2">yourself.</p>
+          <div class="term"><span class="type">trustshell verify "paste your own claim"</span></div>
+          <p class="note rise n1">The command, as printed on this site's Start page.</p>
+        </div>
+
+        <div class="scene scene-c">
+          <p class="tag">story</p>
+          <p class="h rise l1">No line,</p>
+          <p class="h rise l2">no claim.</p>
+          <svg class="flow" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <rect class="box b1" x="14" y="2" width="72" height="20" rx="2.5"/>
+            <text class="lab t1" x="50" y="15">claim</text>
+            <path class="ln a1" pathLength="1" d="M50 22 V37"/>
+            <path class="hd a1" pathLength="1" d="M46.5 33.5 L50 37.5 L53.5 33.5"/>
+            <rect class="box b2" x="14" y="38" width="72" height="20" rx="2.5"/>
+            <text class="lab t2" x="50" y="51">verify</text>
+            <path class="ln a2" pathLength="1" d="M50 58 V73"/>
+            <path class="hd a2" pathLength="1" d="M46.5 69.5 L50 73.5 L53.5 69.5"/>
+            <rect class="box empty b3" x="14" y="74" width="72" height="24" rx="2.5"/>
+            <text class="lab small t3" x="50" y="83">receipt line</text>
+            <text class="lab mono t4" x="50" y="92.5">NOT_CHECKED</text>
+          </svg>
+          <p class="note rise n1">Empty until a person runs the command.</p>
+        </div>
+
+        <div class="scene end">
+          <p class="h big rise">Trust marketing</p>
+          <p class="sub rise">Static pages. No account.</p>
+          <p class="url rise">trustshell.dev</p>
+        </div>
+
+        <!-- Receipt line. It ships as NOT_CHECKED because nobody has run the verify command for this cut.
+             Before recording a cut that says more about TrustShell, replace NOT_CHECKED with what the command printed.
+             Never write a line the command did not print. -->
+        <p class="receipt-line">receipt: NOT_CHECKED</p>
+      </section>
+
+      <div class="chrome">
+        <h2>The script, as text</h2>
+        <p>Every line is labeled. A fact line is about TrustShell. A story line is a stance of this site. They are different methods and are not mixed.</p>
+        <ol class="script">
+          <li><span class="kind">story</span> A name on a list is not a record. Three rows, each stamped NOT_CHECKED. (0 to 3.6 s)</li>
+          <li><span class="kind">fact</span> Check a claim yourself: <code>trustshell verify "paste your own claim"</code>, the command printed on the <a href="/start">Start page</a>. (3.6 to 9 s)</li>
+          <li><span class="kind">story</span> No line, no claim. Claim, verify, receipt line. The receipt box is empty until a person runs the command. (9 to 12.8 s)</li>
+          <li>Trust marketing. Static pages. No account. trustshell.dev. (12.8 s on, held)</li>
+        </ol>
+        <p>The receipt line at the bottom of the frame reads NOT_CHECKED. This cut says nothing about what the command returns, so there is nothing to put there.</p>
+        <p>If your system asks for reduced motion, the frame shows only its last card and nothing moves. Turn that setting off before you record.</p>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

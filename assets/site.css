@@ -68,6 +68,8 @@ th, td {
 
 th { font-family: "Segoe UI", sans-serif; }
 
+table + table { margin-top: 1.5rem; }
+
 footer {
   margin-top: 2rem;
   font-family: "Segoe UI", sans-serif;
