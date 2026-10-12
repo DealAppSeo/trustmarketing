@@ -1,0 +1,37 @@
+[
+  {
+    "id": "read-ui",
+    "what": "Read the current UI",
+    "install": "Read the pages and CSS in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "design-proposal",
+    "what": "Write a UI and UX proposal",
+    "install": "Write the layout, spacing and type proposal in the local checkout. Do not add a tool.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "static-mockup",
+    "what": "Static HTML and CSS mockup, local",
+    "install": "Build a static HTML and CSS mockup in the local checkout. No build step and nothing is fetched.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "accessibility-note",
+    "what": "Accessibility note, read only",
+    "install": "Note contrast, focus order and reduced motion by reading the markup. A person confirms with their own checker.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  },
+  {
+    "id": "repo-grant",
+    "what": "Shipping a design change is a separate grant",
+    "install": "A person grants a repo change. This role does not ship it.",
+    "cost": "no paid key",
+    "status": "NOT_CHECKED"
+  }
+]
