@@ -75,3 +75,42 @@ footer {
   font-family: "Segoe UI", sans-serif;
   font-size: 0.95rem;
 }
+
+.composer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #cfc8bc;
+}
+
+.composer h2 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+.composer label {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.composer textarea,
+.composer select {
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5rem 0.6rem;
+  background: #fff;
+  border: 1px solid #cfc8bc;
+}
+
+.composer textarea { resize: vertical; }
+
+.composer select { width: auto; max-width: 100%; }
+
+.composer .verdict-line { font-size: 1.05rem; }
+
+.composer output {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 600;
+}
