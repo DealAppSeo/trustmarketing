@@ -99,7 +99,7 @@ test('the /cmo draft composer is in-memory only and mirrors the {linkedin, x} al
   assert.match(page, /<label for="platform"/);
   assert.match(page, /<select id="platform"/);
   for (const value of ['linkedin', 'x', 'tiktok', 'youtube', 'other']) {
-    assert.match(page, new RegExp(`<option value="${value}"`), value);
+    assert.equal(page.includes(`<option value="${value}"`), true, value);
   }
 
   // The verdict is announced through an aria-live region.
@@ -108,11 +108,19 @@ test('the /cmo draft composer is in-memory only and mirrors the {linkedin, x} al
   // The binding honesty line, verbatim.
   assert.equal(page.includes('If it cannot check, it does not pass.'), true);
 
-  // Exactly one inline script; it is inline (no src) and names only the pair.
-  const scripts = [...page.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
-  assert.equal(scripts.length, 1);
-  assert.equal(/\bsrc=/i.test(scripts[0][1]), false);
-  const script = scripts[0][2];
+  // Exactly one inline script, located by string scanning rather than an
+  // HTML-tag regexp (matching tags with a regexp is brittle and trips static
+  // analysis; indexOf is exact for this known-shape page).
+  const open = page.indexOf('<script');
+  assert.notEqual(open, -1);
+  assert.equal(page.indexOf('<script', open + 1), -1); // exactly one
+  const attrsEnd = page.indexOf('>', open);
+  assert.notEqual(attrsEnd, -1);
+  const attrs = page.slice(open + '<script'.length, attrsEnd);
+  assert.equal(/\bsrc=/i.test(attrs), false); // inline: no src attribute
+  const close = page.indexOf('</script>', attrsEnd);
+  assert.notEqual(close, -1);
+  const script = page.slice(attrsEnd + 1, close);
   assert.deepEqual(
     [...script.matchAll(/['"](linkedin|x|tiktok|youtube|other)['"]/g)].map((m) => m[1]).sort(),
     ['linkedin', 'x'],
