@@ -62,13 +62,67 @@ test('six static pages do not store text', () => {
   }
   assert.equal(/<form[\s>]/i.test(all), false);
   assert.equal(/<input[\s>]/i.test(all), false);
-  assert.equal(/<textarea[\s>]/i.test(all), false);
   assert.equal(/<video[\s>]/i.test(all), false);
   assert.equal(/<iframe[\s>]/i.test(all), false);
-  assert.equal(/<script[\s>]/i.test(all), false);
   assert.equal(/wallet/i.test(all), false);
   assert.equal(/stake/i.test(all), false);
-  assert.equal(/localStorage/.test(all), false);
+  // The promise stated on the pages -- stores nothing, sends nothing, no
+  // account -- is now enforced directly, so it holds even where a script is
+  // allowed (only /cmo). Nothing on any of these pages may persist or transmit
+  // what you type.
+  assert.equal(/localStorage|sessionStorage|indexedDB|document\.cookie/i.test(all), false);
+  assert.equal(/fetch\(|XMLHttpRequest|sendBeacon|WebSocket|EventSource|navigator\.|import\(/i.test(all), false);
+
+  // Five of the six pages are wholly inert: no textarea, no script at all. The
+  // /cmo page is the single exception -- an in-memory draft composer -- and the
+  // next test holds it to stricter, composer-specific checks.
+  const inert = Object.entries(pages)
+    .filter(([route]) => route !== '/cmo')
+    .map(([, rel]) => html(rel))
+    .join('\n');
+  assert.equal(/<textarea[\s>]/i.test(inert), false);
+  assert.equal(/<script[\s>]/i.test(inert), false);
+});
+
+test('the /cmo draft composer is in-memory only and mirrors the {linkedin, x} allowlist', () => {
+  const page = html(pages['/cmo']);
+
+  // The composer is appended, not a rebuild: the original CMO copy and links stay.
+  assert.match(page, /A draft is not a post\./);
+  assert.match(page, /Nothing here posts\./);
+  assert.match(page, /href="\/methods\/video-social"/);
+  assert.match(page, /href="\/video"/);
+
+  // One labelled textarea, and a <select> picker (not an <input> radio), labelled.
+  assert.equal((page.match(/<textarea\b/gi) ?? []).length, 1);
+  assert.match(page, /<label for="draft"/);
+  assert.match(page, /<label for="platform"/);
+  assert.match(page, /<select id="platform"/);
+  for (const value of ['linkedin', 'x', 'tiktok', 'youtube', 'other']) {
+    assert.match(page, new RegExp(`<option value="${value}"`), value);
+  }
+
+  // The verdict is announced through an aria-live region.
+  assert.match(page, /id="verdict"[^>]*aria-live="polite"/);
+
+  // The binding honesty line, verbatim.
+  assert.equal(page.includes('If it cannot check, it does not pass.'), true);
+
+  // Exactly one inline script; it is inline (no src) and names only the pair.
+  const scripts = [...page.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)];
+  assert.equal(scripts.length, 1);
+  assert.equal(/\bsrc=/i.test(scripts[0][1]), false);
+  const script = scripts[0][2];
+  assert.deepEqual(
+    [...script.matchAll(/['"](linkedin|x|tiktok|youtube|other)['"]/g)].map((m) => m[1]).sort(),
+    ['linkedin', 'x'],
+  );
+
+  // The one script on the site touches no network and no storage either.
+  assert.equal(
+    /fetch\(|XMLHttpRequest|sendBeacon|WebSocket|EventSource|navigator\.|import\(|localStorage|sessionStorage|indexedDB|document\.cookie/i.test(script),
+    false,
+  );
 });
 
 test('start links to TrustShell.dev and prints the three commands', () => {
